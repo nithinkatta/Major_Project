@@ -14,3 +14,5 @@
 .cxx
 local.properties
 /app/src/main/assets/model.onnx
+"app/src/main/assets/model.onnx" 
+"app/src/main/assets/random_forest_model_unflatten.onnx" 
