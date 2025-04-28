@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Camera Preview -->
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signosphere-Gesture Recognition"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/background_light"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Language Selector -->
+
+    <!-- Audio Button -->
+    <RadioGroup
+        android:id="@+id/languageRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingTextView"
+        android:layout_marginTop="29dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/englishRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="English"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/hindiRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hindi"
+            android:textColor="@android:color/white" />
+        <RadioButton
+            android:id="@+id/teluguRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telugu"
+            android:textColor="@android:color/white" />
+        <RadioButton
+            android:id="@+id/chineseRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chinese"
+            android:textColor="@android:color/white" />
+
+    </RadioGroup>
+
+    <!-- Result Text -->
+
+    <RadioGroup
+        android:id="@+id/modelRadiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/aplhamodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="alpha"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/islmodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="words"
+            android:textColor="@android:color/white" />
+
+
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/audioButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/languageRadioGroup"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="148dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Audio Button"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gesture: None"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Optional: Control Buttons at the bottom -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>
